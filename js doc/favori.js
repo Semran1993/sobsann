@@ -1,6 +1,6 @@
 const basketEl = document.getElementById('basket1');
 
-getSelectedProducts();
+getselectFav();
 
 function getselectFav() {
     
@@ -40,7 +40,7 @@ function getselectFav() {
         }
 
     } else {
-        basketEl.innerText = 0;
+        basketEl.innerText = 5;
     }
 
     constainerEl.innerHTML = productAsHtml;

@@ -129,3 +129,6 @@ function parseProducts() {
 function selectProduct(e, item) {
     localStorage.setItem('currentProduct', JSON.stringify(item));
 }
+function selectFav(e, item) {
+    localStorage.setItem('currentProduct', JSON.stringify(item));
+}

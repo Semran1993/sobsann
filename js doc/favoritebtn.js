@@ -90,7 +90,7 @@ getselectFav();
 
 
 function parseselectFav() {
-    const containerEl = document.getElementById('product-content');
+    const containerEl = document.getElementById('product');
 
     try {
         const product = JSON.parse(localStorage.getItem('currentProduct'));
@@ -126,13 +126,13 @@ function parseselectFav() {
 
 }
 
-function getSelectedProducts() {
+function getselectFav() {
     
-    const items = localStorage.getItem('selectedProducts');
+    const items = localStorage.getItem('selectFav');
 
     if(items) {
         const parsedItems = JSON.parse(items);
-        selectedProducts = parsedItems;
+        selectFav = parsedItems;
         basketEl.innerText = parsedItems.length;
     }
 }
@@ -141,15 +141,15 @@ function getSelectedProducts() {
 
 function addToBucket(e, productId) {
     e.preventDefault();
-    const productAlreadySelected = selectedProducts.filter(item => item.id === productId);
+    const productAlreadySelected = selectFav.filter(item => item.id === productId);
 
     if(productAlreadySelected.length === 0) {
-        const selectedProduct = data.filter(item => item.id === productId)
-        selectedProducts.push(selectedProduct[0]);
+        const selectFav = data.filter(item => item.id === productId)
+        selectFav.push(selectFav[0]);
     }
 
-    basketEl.innerText = selectedProducts.length;
-    localStorage.setItem('selectedProducts', JSON.stringify(selectedProducts));
+    basketEl.innerText = selectFav.length;
+    localStorage.setItem('selectFav', JSON.stringify(selectFav));
 }
 
 
