@@ -110,7 +110,7 @@ function parseselectFav() {
               </div>
             </div>
             <div class="cart-footer"> <a onclick="addToBucket(event)" href="mehsul haqqında.html" class="btn-general add-cart" ><span>Səbətə at</span> <i class="fa-solid fa-cart-shopping"></i> </a>
-              <div class="button-group"> <a href="#" ><i class="fa-solid fa-scale-balanced"></i> <span>Müqayisə</span> </a> <a onclick="addToBucket(event, ${product.id})" href="#"  > <i class="fa-solid fa-heart"></i> </a> </div>
+              <div class="button-group"> <a href="#" ><i class="fa-solid fa-scale-balanced"></i> <span>Müqayisə</span> </a> <a onclick="addToBuckett(event)" href="#"  > <i class="fa-solid fa-heart"></i> </a> </div>
             </div>
           </div>
             `;
@@ -139,7 +139,7 @@ function getselectFav() {
 
 /* Add to bucket */
 
-function addToBucket(e, productId) {
+function addToBuckett(e, productId) {
     e.preventDefault();
     const productAlreadySelected = selectFav.filter(item => item.id === productId);
 
