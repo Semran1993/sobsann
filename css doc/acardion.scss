@@ -1,0 +1,21 @@
+
+    &::after {
+      background-image: escape-svg($accordion-button-active-icon);
+      transform: $accordion-icon-transform;
+    }
+  }
+
+  // Accordion icon
+  &::after {
+    flex-shrink: 0;
+    width: $accordion-icon-width;
+    height: $accordion-icon-width;
+    margin-left: auto;
+    content: "";
+    background-image:url("file:///C:/Users/semra/OneDrive/Masa%C3%BCst%C3%BC/sobsan/photo/icon/icons-arrow-down.svg");
+    background-repeat: no-repeat;
+   
+    @include transition($accordion-icon-transition);
+  }
+
+

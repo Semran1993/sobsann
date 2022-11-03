@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/c:/Users/semra/OneDrive/Masa%C3%BCst%C3%BC/js%20doc/lusy/istək listəsi.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/c:/Users/semra/OneDrive/Masa%C3%BCst%C3%BC/js%20doc/lusy/istək listəsi.html"
+        }
+    ]
+}
