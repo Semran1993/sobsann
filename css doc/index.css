@@ -1461,7 +1461,8 @@ display: flex;
 
 
 #top-products .card {
-  max-width: 100%;
+    width: 273px;
+    margin: 3px;
     height: 500px;
     position: relative;
     display: flex;

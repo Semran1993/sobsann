@@ -52,7 +52,7 @@ const products = [
         view: 'Parlaq',
         characterize: 'Silinə bilən'
     },
-    {
+     {
         id: 4,
         name: 'SOBAKRIL LUX',
         brand: 'Sobsan',
@@ -68,7 +68,7 @@ const products = [
         view: 'Parlaq',
         characterize: 'Silinə bilən'
     },
-    {
+    /* {
         id: 5,
         name: 'BARBUS-SOBPOKS FINISH',
         brand: 'Sobsan',
@@ -83,7 +83,7 @@ const products = [
         usePlace: 'Daxili cəbhə',
         view: 'Parlaq',
         characterize: 'Silinə bilən'
-    },
+    },*/
 ];
 
 addProducts();
@@ -91,7 +91,7 @@ getSelectedProducts();
 
 function addProducts() {
     // product-container
-
+   
     const containerEll = document.getElementById('products-container');
  const product = JSON.parse(localStorage.getItem('currentPro'));
    
@@ -99,7 +99,7 @@ function addProducts() {
 
     for(let product of products) {
         items += `
-       <div class="item">
+       
             <div class="card ">
             <div class="header-cart"> <span>Təklif olunan</span> </div>
             <div class="img-box"><a href="mehsul haqqında.html"> <img src="photo/product/${product.image}" alt=""></a></div>
@@ -128,7 +128,7 @@ function addProducts() {
                 </div>
             </div>
             </div>
-        
+            
         `
     }
 

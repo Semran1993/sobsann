@@ -47,7 +47,7 @@ const data = [
         view: 'Parlaq',
         characterize: 'Silinə bilən'
     },
-    {
+   {
         id: 4,
         name: 'SOBAKRIL LUX',
         brand: 'Sobsan',
@@ -63,7 +63,7 @@ const data = [
         view: 'Parlaq',
         characterize: 'Silinə bilən'
     },
-    {
+    /*   {
         id: 5,
         name: 'BARBUS-SOBPOKS FINISH',
         brand: 'Sobsan',
@@ -78,7 +78,7 @@ const data = [
         usePlace: 'Daxili cəbhə',
         view: 'Parlaq',
         characterize: 'Silinə bilən'
-    },
+    },*/
 ];
 
 parseProducts();
@@ -90,7 +90,7 @@ function parseProducts() {
 
     for(let item of data){
         productsAsHtml += `
-        <div class="item">
+       
             <div class="card ">
             <div class="header-cart"> <span>Təklif olunan</span> </div>
             <div class="img-box"><a href="mehsul haqqında.html"> <img src="photo/product/${item.image}" alt=""></a></div>
@@ -118,8 +118,8 @@ function parseProducts() {
                     </a>
                 </div>
             </div>
-            </div>
-        </div>
+            
+       
         `;
     }
 
