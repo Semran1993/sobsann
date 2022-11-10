@@ -1050,8 +1050,10 @@ font-size: 20px;
     transition: all 0.3s ease;
 }
 
-
-
+#favori-box ul li.img-fluid{
+    display: flex;
+}
+#favori-box ul li img{max-width: 63%;}
 #favori-box .add-cart{
     background: #ed3237;
     padding: 12px 63px;
@@ -1059,7 +1061,10 @@ font-size: 20px;
   margin: 30px 0;
     white-space: nowrap;
 }
-
+#favori-box ul li a {
+   
+    height: 176px;
+}
 
 
 

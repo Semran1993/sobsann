@@ -109,11 +109,11 @@ function parseProducts() {
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
                 <div class="button-group">
-                    <a href="#" >
+                    <a  onclick='addProducts(event, ${JSON.stringify(item)})' >
                         <i class="fa-solid fa-scale-balanced"></i>
                         <span>Müqayisə</span>
                     </a>
-                    <a  onclick='selectFav(event, ${JSON.stringify(item)})' >
+                    <a  onclick='addProducts(event, ${JSON.stringify(item)})' >
                         <i class="fa-solid fa-heart"></i>
                     </a>
                 </div>
@@ -129,6 +129,17 @@ function parseProducts() {
 function selectProduct(e, item) {
     localStorage.setItem('currentProduct', JSON.stringify(item));
 };
-function selectFav(e, item) {
-    localStorage.setItem('currentProduct', JSON.stringify(item));
+function addProducts(e, item) {
+    localStorage.setItem('currentPro', JSON.stringify(item));
 };
+
+
+
+
+
+
+
+
+
+
+

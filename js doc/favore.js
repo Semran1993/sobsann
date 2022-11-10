@@ -1,7 +1,7 @@
 
 /* get products */
 
-let selectedProducts = [];
+let selectFav = [];
 const basketEl = document.getElementById('favorit');
 
 const products = [
@@ -88,9 +88,9 @@ const products = [
 ];
 
 addProducts();
-getSelectedProducts();
+getselectFav();
 
-function addProducts() {
+function selectFav() {
     // product-container
 
     const containerEl = document.getElementById('product-container');
@@ -127,24 +127,25 @@ function addProducts() {
 
 function addToBucket(e, productId) {
     e.preventDefault();
-    const productAlreadySelected = selectedProducts.filter(item => item.id === productId);
+    const productAlreadySelected = selectFav.filter(item => item.id === productId);
 
     if(productAlreadySelected.length === 0) {
-        const selectedProduct = products.filter(item => item.id === productId)
-        selectedProducts.push(selectedProduct[0]);
+        const selectFav = products.filter(item => item.id === productId)
+        selectFav.push(selectFav[0]);
     }
 
-    basketEl.innerText = selectedProducts.length;
-    localStorage.setItem('selectedProducts', JSON.stringify(selectedProducts));
+    basketEl.innerText = selectFav.length;
+    localStorage.setItem('selectFav', JSON.stringify(selectFav));
 }
 
-function getSelectedProducts() {
+function getselectFav() {
     
-    const items = localStorage.getItem('selectedProducts');
+    const items = localStorage.getItem('selectFav');
     if(items) {
         const parsedItems = JSON.parse(items);
-        selectedProducts = parsedItems;
+        selectFav = parsedItems;
         basketEl.innerText = parsedItems.length;
+        
     }
 }
 
@@ -156,7 +157,7 @@ function getSelectedProducts() {
 
 
 let selectedProducts = [];
-const basketEl = document.getElementById('favorit');
+const basketEl = document.getElementById('basket1');
 
 
 parseSelectedProduct();
@@ -184,7 +185,7 @@ function parseSelectedProduct() {
               </div>
             </div>
             <div class="cart-footer"> <a href="mehsul haqqında.html" class="btn-general add-cart"><span class="shopping-add">Səbətə at</span> <i class="fa-solid fa-cart-shopping"></i> </a>
-              <div class="button-group"> <a href="#" class="btn-general"><i class="fa-solid fa-scale-balanced"></i> <span>Müqayisə</span> </a> <a  onclick="addToBucfav(event, ${product.id})"  id="favorit" class="btn-general favorit"> <i class="fa-solid fa-heart"></i> </a> </div>
+              <div class="button-group"> <a href="#" class="btn-general"><i class="fa-solid fa-scale-balanced"></i> <span>Müqayisə</span> </a> <a  onclick="addToBucfav(event, ${product.id})"  id="" class="btn-general favorit"> <i class="fa-solid fa-heart"></i> </a> </div>
             </div>
           </div>
             `;
